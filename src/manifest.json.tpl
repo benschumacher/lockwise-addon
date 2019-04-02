@@ -58,11 +58,17 @@
   },
 
   "permissions": [
+    "https://lockbox.firefox.com/architecture/*",
     "tabs",
     "clipboardRead",
     "clipboardWrite",
     "mozillaAddons",
     "storage",
-    "telemetry"
+    "telemetry",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": [
+    "/list/manage.html"
   ]
 }

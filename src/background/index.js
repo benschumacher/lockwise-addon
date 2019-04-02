@@ -10,11 +10,13 @@ import { initializeTelemetry } from "./telemetry";
 import { initializeDataStore } from "./datastore";
 import { initializeEnvironment } from "./environment";
 import { initializeProfileInfo } from "./profile";
+import { initializeIntercepts } from "./intercepts";
 
 Promise.resolve().then(async () => {
   await initializeEnvironment();
   initializeTelemetry();
   initializeMessagePorts();
+  initializeIntercepts();
   await initializeDataStore();
   await initializeProfileInfo();
   await updateBrowserAction();
