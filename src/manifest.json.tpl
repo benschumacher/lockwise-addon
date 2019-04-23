@@ -26,12 +26,21 @@
     "default_icon": {
       "32": "icons/lb_locked.svg"
     },
-    "default_title": "Lockbox",
+    "default_title": "{{title}}",
     "browser_style": false
   },
 
+  "sidebar_action": {
+    "default_icon": {
+      "16": "icons/icon-lockbox.svg",
+      "32": "icons/icon-lockbox.svg"
+    },
+    "default_title": "{{title}}",
+    "default_panel": "list/popup.html"
+  },
+
   "commands": {
-    "_execute_browser_action": {
+    "_execute_sidebar_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+L"
       }

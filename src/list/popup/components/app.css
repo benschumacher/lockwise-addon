@@ -2,13 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+html, body {
+  height: 100vh;
+}
 body {
   padding: 0;
   margin: 0;
-  width: 300px;
-  height: 339px;
   color: #0c0c0d;
   background-color: #ffffff;
+  border: 1px solid #4a4a4f;
   font: caption;
   font-size: 13px;
   -moz-user-select: none;
