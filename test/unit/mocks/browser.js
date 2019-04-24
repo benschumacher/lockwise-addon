@@ -96,16 +96,7 @@ function makePairedPorts(contextId) {
 
 window.browser = {
   browserAction: {
-    _popupPage: "",
     onClicked: new MockListener(),
-
-    setPopup({popup}) {
-      this._popupPage = popup;
-    },
-
-    async getPopup() {
-      return this._popupPage;
-    },
 
     setIcon() {},
   },

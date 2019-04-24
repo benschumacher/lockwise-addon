@@ -13,10 +13,8 @@ chai.use(chaiAsPromised);
 chai.use(sinonChai);
 
 describe("background > browser action", () => {
-  it("opens popup", async () => {
+  it("invokes listener", async () => {
     await updateBrowserAction();
-    await expect(browser.browserAction.getPopup()).to.eventually.equal(
-      browser.extension.getURL("list/popup.html")
-    );
+    expect(browser.browserAction.onClicked.getListener()).to.not.be.null;
   });
 });
