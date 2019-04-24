@@ -36,7 +36,8 @@
       "32": "icons/icon-lockbox.svg"
     },
     "default_title": "{{title}}",
-    "default_panel": "list/popup.html"
+    "default_panel": "list/popup.html",
+    "open_at_install": false
   },
 
   "commands": {
