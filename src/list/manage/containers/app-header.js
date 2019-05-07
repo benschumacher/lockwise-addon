@@ -13,18 +13,14 @@ import {
   openSyncPrefs,
   openProfileMenu,
 } from "../../actions";
-import AddItem from "../containers/add-item";
-import ItemFilter from "../../containers/item-filter";
 
 import styles from "./app-header.css";
 
 export class AppHeader extends React.Component {
   static get propTypes() {
     return {
-      store: PropTypes.object,
       profile: PropTypes.object,
       hasProfile: PropTypes.bool.isRequired,
-      inputRef: PropTypes.func,
       onClickMenuFeedback: PropTypes.func.isRequired,
       onClickMenuFAQ: PropTypes.func.isRequired,
       onClickMenuConnect: PropTypes.func.isRequired,
@@ -97,10 +93,8 @@ export class AppHeader extends React.Component {
 
   render() {
     const {
-      store,
       profile,
       hasProfile,
-      inputRef,
       onClickMenuFeedback,
       onClickMenuFAQ,
       onClickMenuConnect,
@@ -119,11 +113,6 @@ export class AppHeader extends React.Component {
           </Localized>
         </h1>
 
-        <div className={styles.appHeaderSearch}>
-          <ItemFilter inputRef={inputRef} store={store}/>
-          <AddItem store={store}/>
-        </div>
-
         <nav className={styles.appHeaderProfileStatus}>
           <button
             id="avatar"
@@ -133,7 +122,7 @@ export class AppHeader extends React.Component {
             {hasProfile ? (
               <React.Fragment>
                 <span data-profile-id={profile.id}>{profile.displayName || profile.email}</span>
-                <img src={profile.avatar} title={profile.displayName || profile.email}/>
+                <img src={profile.avatar} />
               </React.Fragment>
             ) : (
               <img id="logged-out-avatar" src="/images/logged-out-avatar.png" />

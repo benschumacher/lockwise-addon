@@ -75,12 +75,13 @@ item-summary-copy-password = Copy Password
   .title = Copy the password to the clipboard
 
 item-filter =
-  .placeholder = Search Logins
-  .aria-label = Search Logins
+  .placeholder = Search { -product-short-name }
+  .aria-label = Search { -product-short-name }
 
 ## manage
 
-add-item-button = New Login
+add-item-button =
+  .title = New login
 
 send-feedback-button = Provide Feedback
 
